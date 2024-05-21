@@ -83,15 +83,12 @@
       <ul id="proyectos"></ul>
     </aside>
 
-    <main>
-      <section style="padding: 0">
-        <form>
-          <input type="search" id="buscar" name="buscar" placeholder="Buscar" />
-        </form>
-      </section>
+    <main style="overflow: hidden;">
       <section>
         <!-- creo un formulario y le pongo el metodo post -->
         <form id="agregar" method="post">
+            <h2>Detalles del proyecto</h2>
+
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" required />
 
@@ -107,7 +104,7 @@
           <label for="presupuesto">Presupuesto</label>
           <input type="number" id="presupuesto" name="presupuesto" required />
 
-          <button class="btn-Guardar" type="submit">Guardar</button>
+          <button class="btn-Guardar" type="submit">Actualizar</button>
         </form>
       </section>
       <div class="overlay"></div>
@@ -163,6 +160,6 @@
       });
     </script>
 
-    <script src="./js/proyectos.js"></script>
+    <script src="./js/proyectos-detalle.js"></script>
   </body>
 </html>

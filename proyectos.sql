@@ -16,12 +16,10 @@
 
 
 -- Volcando estructura de base de datos para proyectos
-DROP DATABASE IF EXISTS `proyectos`;
 CREATE DATABASE IF NOT EXISTS `proyectos` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci */;
 USE `proyectos`;
 
 -- Volcando estructura para tabla proyectos.actividades
-DROP TABLE IF EXISTS `actividades`;
 CREATE TABLE IF NOT EXISTS `actividades` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) DEFAULT '0',
@@ -39,7 +37,6 @@ CREATE TABLE IF NOT EXISTS `actividades` (
 DELETE FROM `actividades`;
 
 -- Volcando estructura para tabla proyectos.actividad_miembro
-DROP TABLE IF EXISTS `actividad_miembro`;
 CREATE TABLE IF NOT EXISTS `actividad_miembro` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `actividades_id` int(11) NOT NULL DEFAULT 0,
@@ -56,7 +53,6 @@ CREATE TABLE IF NOT EXISTS `actividad_miembro` (
 DELETE FROM `actividad_miembro`;
 
 -- Volcando estructura para tabla proyectos.miembro
-DROP TABLE IF EXISTS `miembro`;
 CREATE TABLE IF NOT EXISTS `miembro` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
@@ -71,7 +67,6 @@ CREATE TABLE IF NOT EXISTS `miembro` (
 DELETE FROM `miembro`;
 
 -- Volcando estructura para tabla proyectos.proyectos
-DROP TABLE IF EXISTS `proyectos`;
 CREATE TABLE IF NOT EXISTS `proyectos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) DEFAULT '0',
@@ -80,10 +75,16 @@ CREATE TABLE IF NOT EXISTS `proyectos` (
   `fecha_fin` date NOT NULL,
   `descripcion` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Volcando datos para la tabla proyectos.proyectos: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla proyectos.proyectos: ~5 rows (aproximadamente)
 DELETE FROM `proyectos`;
+INSERT INTO `proyectos` (`id`, `nombre`, `presupuesto`, `fecha_inicio`, `fecha_fin`, `descripcion`) VALUES
+	(1, 'eddy f', 45, '2024-05-11', '2024-05-11', 'rtc'),
+	(2, 'luisgg', 55, '2023-05-13', '2024-05-13', 'gg'),
+	(28, 'Nemo minima voluptatdddd', 51, '1977-12-21', '1979-03-19', 'Temporibus libero vofffffd'),
+	(29, 'Delectus', 28, '1984-06-23', '1996-04-26', 'Quod ut cum vero dol'),
+	(30, 'eddy talavera ', 55, '2024-05-22', '2024-05-10', 'dddd');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

@@ -5,12 +5,13 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Sitio web de gestión de proyectos de Carlos Andres Perez</title>
+    <title>Sitio web de gestión de proyectos</title>
     <link
       rel="stylesheet"
       href="css/estilos.css" />
 
     <!-- HTML Meta Tags -->
+    <title>Gestión de proyectos</title>
     <meta
       name="description"
       content="Optimiza la gestión de proyectos con nuestra plataforma en línea. Colabora, sigue y organiza tareas fácilmente para mejorar la productividad." />
@@ -59,6 +60,12 @@
       rel="icon"
       href="images/favicon.ico"
       type="image/x-icon" />
+
+      <script src="https://kit.fontawesome.com/79134ca9d0.js" crossorigin="anonymous"></script>
+	
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -80,10 +87,13 @@
       </nav>
     </header>
 
-    <aside>
-      <h3>Proyectos 
-        <a class="agregar" href="nuevo-proyecto.html">Agregar proyecto</a>
-      </h3>
+    <aside class="container"> 
+      <div class="container__div">
+      <span class="container__div-span">
+        <h3 class="container__div-span-h3">Proyectos </h3>
+      </span>
+      </div>
+      <button class="container__btn"><i class="fa-regular fa-folder"></i></i><a href="./nuevo-proyecto.html">Agregar Proyectos</a></button>
       <ul id="proyectos"></ul>
     </aside>
 
@@ -98,7 +108,7 @@
         </form>
       </section>
       <section>
-        <h1>Gestión de proyectos - Carlos Andres Pérez</h1>
+        <h1 style=" text-align: center;">Gestión de proyectos Alex Talavera</h1>
         <h2>Proyectos</h2>
         <p>En esta sección se muestran los proyectos</p>
       </section>
@@ -117,7 +127,7 @@
     </main>
 
     <footer>
-      <p>&copy; 2020 - Todos los derechos reservados</p>
+      <p>&copy; 2024 - Todos los derechos reservados</p>
     </footer>
 
     <script>
